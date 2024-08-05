@@ -1,4 +1,4 @@
-from src.utils import add
+from scripts.utils import add
 
 
 def test_add():
