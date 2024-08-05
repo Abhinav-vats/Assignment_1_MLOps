@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/674d7091e5a24cbd94cc354a7ea9e8a7/artifacts
+end_time: 1722879468381
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 674d7091e5a24cbd94cc354a7ea9e8a7
+run_name: caring-donkey-288
+run_uuid: 674d7091e5a24cbd94cc354a7ea9e8a7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722879466812
+status: 4
+tags: []
+user_id: Tarak
