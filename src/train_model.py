@@ -3,7 +3,7 @@ import mlflow.sklearn
 from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
 import os
-from scripts.utils import save_object
+from src.utils import save_object
 
 
 # Step 1: Set the MLflow tracking URI
