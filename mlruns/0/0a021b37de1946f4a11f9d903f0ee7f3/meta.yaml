@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/0a021b37de1946f4a11f9d903f0ee7f3/artifacts
+end_time: 1722756741086
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0a021b37de1946f4a11f9d903f0ee7f3
+run_name: capricious-bee-27
+run_uuid: 0a021b37de1946f4a11f9d903f0ee7f3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722756739268
+status: 4
+tags: []
+user_id: Tarak
