@@ -3,6 +3,8 @@ import mlflow.sklearn
 from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
 import os
+from utils import save_object
+
 
 # Step 1: Set the MLflow tracking URI
 mlflow.set_tracking_uri("/Users/Tarak/Personal/mlruns")
@@ -23,15 +25,20 @@ X, y = data.data, data.target
 model = RandomForestClassifier()
 model.fit(X, y)
 
+save_object(
+                file_path=os.path.join('artifact', 'model.pkl'),
+                obj=model
+            )
+
 # Step 5: Log the model using MLflow
 with mlflow.start_run() as run:
     # Log parameters (if any)
     mlflow.log_param("model_type", "RandomForestClassifier")
-    
+
     # Log the model
     mlflow.sklearn.log_model(model, "model")
-    
+
     # Log metrics (if any)
     mlflow.log_metric("accuracy", model.score(X, y))
-    
+
     print(f"Model logged successfully with run ID: {run.info.run_id}")
