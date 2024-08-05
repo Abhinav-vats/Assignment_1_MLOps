@@ -41,7 +41,9 @@ jobs:
           pip install -r requirement.txt
           pip install pytest
       - name: Run tests
-        run: pytest
+        run: |
+          pytest --version
+          pytest
 
   deploy:
     runs-on: ubuntu-latest
