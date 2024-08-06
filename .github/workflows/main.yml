@@ -46,7 +46,6 @@ jobs:
       - name: Verify Python Version and Environment
         run: |
           python --version
-          pip list
           echo $PYTHONPATH
 
       - name: Run tests
