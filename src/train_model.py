@@ -21,12 +21,20 @@ mlflow.set_tracking_uri("http://127.0.0.1:5000")
 experiment_name = "Default"
 mlflow.set_experiment(experiment_name)
 
+# Determine the new dataset version
+def get_next_version():
+    version = 1
+    while os.path.exists(f'breast_cancer_data_v{version}.csv'):
+        version += 1
+    return version
+
 # Load dataset
 data = load_breast_cancer()
 X, y = data.data, data.target
 
-# Save the dataset to a CSV file
-data_path = "breast_cancer_data.csv"
+# Save the dataset to a CSV file with a version number
+version = get_next_version()
+data_path = f"breast_cancer_data_v{version}.csv"
 df = pd.DataFrame(data.data, columns=data.feature_names)
 df['target'] = data.target
 df.to_csv(data_path, index=False)
@@ -94,11 +102,11 @@ if not os.path.exists('.dvc'):
 
 # Add the dataset to DVC
 os.system(f'dvc add {data_path}')
-os.system('dvc push')
+os.system(f'dvc push')
 
 # Add the model artifacts to DVC
-os.system('dvc add artifact/')
-os.system('dvc push')
+os.system(f'dvc add artifact/')
+os.system(f'dvc push')
 
 # Flask app for serving the model
 app = Flask(__name__)
