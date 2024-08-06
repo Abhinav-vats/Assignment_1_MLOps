@@ -12,3 +12,6 @@ dvc remote modify myremote --local gdrive_client_id 42411527554-l23lu38n6teaeuc9
 dvc remote modify myremote --local gdrive_client_secret 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
 
 echo "DVC initialization and configuration completed."
+
+# Start the MLflow server
+mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns --host 0.0.0.0 --port 5000 &

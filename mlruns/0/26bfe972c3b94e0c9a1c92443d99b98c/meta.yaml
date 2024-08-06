@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/26bfe972c3b94e0c9a1c92443d99b98c/artifacts
+end_time: 1722922208091
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 26bfe972c3b94e0c9a1c92443d99b98c
+run_name: worried-crane-941
+run_uuid: 26bfe972c3b94e0c9a1c92443d99b98c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722922198029
+status: 4
+tags: []
+user_id: USER

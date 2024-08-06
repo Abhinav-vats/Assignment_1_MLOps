@@ -1,0 +1,9 @@
+flask
+scikit-learn
+joblib
+mlflow
+optuna
+pandas
+dvc
+dill
+requests
