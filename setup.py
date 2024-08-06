@@ -24,5 +24,5 @@ setup(
     version='0.0.1',
     author='Abhinav Kumar Singh,...',
     packages=find_packages(),
-    install_requires=get_requirements('requirement.txt')
+    install_requires=get_requirements('requirements.txt')
 )
