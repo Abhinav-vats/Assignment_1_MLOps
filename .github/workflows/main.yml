@@ -58,4 +58,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Deploy
-        run: echo "Deploying the application..."
+        run: |
+          docker build -t cancer_dataset .
+          echo "Deploying the application..."
