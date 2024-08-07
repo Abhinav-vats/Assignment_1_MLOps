@@ -20,5 +20,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5005
 EXPOSE 5000
 
-# Run the train_model.py script
-CMD ["python", "/app/src/train_model.py"]
+# Copy the dev_init.sh script and service account JSON file
+COPY src/dev_init.sh /app/dev_init.sh
+
+# Make the dev_init.sh script executable
+RUN chmod +x /app/dev_init.sh
+
+# Run the dev_init.sh script and then train_model.py
+CMD ["/bin/bash", "-c", "/app/dev_init.sh && sleep 10 && python /app/src/train_model.py"]

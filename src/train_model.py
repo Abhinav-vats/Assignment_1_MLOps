@@ -14,7 +14,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 # Step 1: Set the MLflow tracking URI
-mlflow.set_tracking_uri("http://127.0.0.1:5001")
+mlflow.set_tracking_uri("http://127.0.0.1:5003")
 
 # Create or get default experiment
 experiment_name = "Default"
