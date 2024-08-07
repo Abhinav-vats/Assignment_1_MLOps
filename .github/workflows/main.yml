@@ -50,22 +50,14 @@ jobs:
 
       - name: Run tests
         run: pytest
-  build:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: Build
-        uses: actions/checkout@v2
-      - name: Docker Image
-        run: docker build -t cancer_dataset .
 
   deploy:
     runs-on: ubuntu-latest
-    needs: build
+    needs: test
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Build
+        run: docker build -t cancer_dataset .
       - name: Deploy
-        run: |
-          docker build -t cancer_dataset .
-          echo "Deploying the application..."
+        run: echo "Deploying the application..."
