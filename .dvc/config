@@ -1,4 +1,6 @@
 [core]
+    no_scm = True
     remote = myremote
 ['remote "myremote"']
     url = gdrive://1CF-7XIaupXxt3EREqhwSOUI0gEvVZAoH
+    gdrive_use_service_account = true

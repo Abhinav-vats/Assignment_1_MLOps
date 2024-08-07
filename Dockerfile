@@ -22,7 +22,6 @@ EXPOSE 5000
 
 # Copy the dev_init.sh script and service account JSON file
 COPY src/dev_init.sh /app/dev_init.sh
-COPY /gdrive_service_account.json /app/gdrive_service_account.json
 
 # Make the dev_init.sh script executable
 RUN chmod +x /app/dev_init.sh
